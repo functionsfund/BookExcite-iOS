@@ -1,6 +1,6 @@
-language: objective-c 
+language: objective-c
 osx_image: xcode9
 script:
-  - xcodebuild -scheme BookExcite -workspace BookExcite.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=11.1' build test
+  - xcodebuild -scheme BookExcite -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=11.1' build test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
