@@ -1,7 +1,6 @@
 language: objective-c
 osx_image: xcode9
 xcode_project: BookExcite.xcodeproj
-xcode_scheme: BookExcite
-xcode_sdk: iphonesimulator8.4
+xcode_sdk: iphonesimulator9.2
 after_success:
   - bash <(curl -s https://codecov.io/bash)
