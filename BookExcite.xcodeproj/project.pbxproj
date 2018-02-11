@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		1A58125A201D550300B24449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A581259201D550300B24449 /* AppDelegate.swift */; };
 		1A58125C201D550300B24449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58125B201D550300B24449 /* ViewController.swift */; };
-		1A58125F201D550300B24449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A58125D201D550300B24449 /* Main.storyboard */; };
 		1A581261201D550300B24449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A581260201D550300B24449 /* Assets.xcassets */; };
 		1A581264201D550300B24449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A581262201D550300B24449 /* LaunchScreen.storyboard */; };
 		1A58126F201D550300B24449 /* BookExciteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58126E201D550300B24449 /* BookExciteTests.swift */; };
 		1A58127A201D550300B24449 /* BookExciteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A581279201D550300B24449 /* BookExciteUITests.swift */; };
+		CDE8226E2030DF6F00BD21AC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226C2030DF6C00BD21AC /* RealmSwift.framework */; };
+		CDE8226F2030DF6F00BD21AC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226D2030DF6E00BD21AC /* Realm.framework */; };
+		CDE822702030E33700BD21AC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226D2030DF6E00BD21AC /* Realm.framework */; };
+		CDE822712030E33700BD21AC /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226D2030DF6E00BD21AC /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CDE822722030E33700BD21AC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226C2030DF6C00BD21AC /* RealmSwift.framework */; };
+		CDE822732030E33700BD21AC /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226C2030DF6C00BD21AC /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,11 +38,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CDE822742030E33700BD21AC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CDE822732030E33700BD21AC /* RealmSwift.framework in Embed Frameworks */,
+				CDE822712030E33700BD21AC /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1A581256201D550300B24449 /* BookExcite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookExcite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A581259201D550300B24449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A58125B201D550300B24449 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A58125E201D550300B24449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A581260201D550300B24449 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A581263201D550300B24449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A581265201D550300B24449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +66,9 @@
 		1A581275201D550300B24449 /* BookExciteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookExciteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A581279201D550300B24449 /* BookExciteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookExciteUITests.swift; sourceTree = "<group>"; };
 		1A58127B201D550300B24449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1D101F2030D43C00327AC4 /* BookExcite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BookExcite.entitlements; sourceTree = "<group>"; };
+		CDE8226C2030DF6C00BD21AC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		CDE8226D2030DF6E00BD21AC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE822702030E33700BD21AC /* Realm.framework in Frameworks */,
+				CDE8226F2030DF6F00BD21AC /* Realm.framework in Frameworks */,
+				CDE822722030E33700BD21AC /* RealmSwift.framework in Frameworks */,
+				CDE8226E2030DF6F00BD21AC /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +103,7 @@
 		1A58124D201D550300B24449 = {
 			isa = PBXGroup;
 			children = (
+				CDE8226B2030DF5E00BD21AC /* Frameworks */,
 				1A581258201D550300B24449 /* BookExcite */,
 				1A58126D201D550300B24449 /* BookExciteTests */,
 				1A581278201D550300B24449 /* BookExciteUITests */,
@@ -97,9 +124,9 @@
 		1A581258201D550300B24449 /* BookExcite */ = {
 			isa = PBXGroup;
 			children = (
+				CD1D101F2030D43C00327AC4 /* BookExcite.entitlements */,
 				1A581259201D550300B24449 /* AppDelegate.swift */,
 				1A58125B201D550300B24449 /* ViewController.swift */,
-				1A58125D201D550300B24449 /* Main.storyboard */,
 				1A581260201D550300B24449 /* Assets.xcassets */,
 				1A581262201D550300B24449 /* LaunchScreen.storyboard */,
 				1A581265201D550300B24449 /* Info.plist */,
@@ -125,6 +152,15 @@
 			path = BookExciteUITests;
 			sourceTree = "<group>";
 		};
+		CDE8226B2030DF5E00BD21AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDE8226D2030DF6E00BD21AC /* Realm.framework */,
+				CDE8226C2030DF6C00BD21AC /* RealmSwift.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +171,7 @@
 				1A581252201D550300B24449 /* Sources */,
 				1A581253201D550300B24449 /* Frameworks */,
 				1A581254201D550300B24449 /* Resources */,
+				CDE822742030E33700BD21AC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +231,11 @@
 					1A581255201D550300B24449 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					1A581269201D550300B24449 = {
 						CreatedOnToolsVersion = 9.2;
@@ -234,7 +276,6 @@
 			files = (
 				1A581264201D550300B24449 /* LaunchScreen.storyboard in Resources */,
 				1A581261201D550300B24449 /* Assets.xcassets in Resources */,
-				1A58125F201D550300B24449 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +337,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1A58125D201D550300B24449 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A58125E201D550300B24449 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1A581262201D550300B24449 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -426,8 +459,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BookExcite/BookExcite.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FNMD8EWACS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = BookExcite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = impresyjna.com.BookExcite;
@@ -441,8 +479,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BookExcite/BookExcite.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FNMD8EWACS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = BookExcite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = impresyjna.com.BookExcite;
