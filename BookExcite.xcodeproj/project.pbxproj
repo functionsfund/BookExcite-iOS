@@ -13,8 +13,7 @@
 		1A581264201D550300B24449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A581262201D550300B24449 /* LaunchScreen.storyboard */; };
 		1A58126F201D550300B24449 /* BookExciteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58126E201D550300B24449 /* BookExciteTests.swift */; };
 		1A58127A201D550300B24449 /* BookExciteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A581279201D550300B24449 /* BookExciteUITests.swift */; };
-		CDE8226E2030DF6F00BD21AC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226C2030DF6C00BD21AC /* RealmSwift.framework */; };
-		CDE8226F2030DF6F00BD21AC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226D2030DF6E00BD21AC /* Realm.framework */; };
+		CD81D2C9203F637600D851B0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD81D2C8203F637600D851B0 /* RxSwift.framework */; };
 		CDE822702030E33700BD21AC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226D2030DF6E00BD21AC /* Realm.framework */; };
 		CDE822712030E33700BD21AC /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226D2030DF6E00BD21AC /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDE822722030E33700BD21AC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8226C2030DF6C00BD21AC /* RealmSwift.framework */; };
@@ -67,6 +66,7 @@
 		1A581279201D550300B24449 /* BookExciteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookExciteUITests.swift; sourceTree = "<group>"; };
 		1A58127B201D550300B24449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD1D101F2030D43C00327AC4 /* BookExcite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BookExcite.entitlements; sourceTree = "<group>"; };
+		CD81D2C8203F637600D851B0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
 		CDE8226C2030DF6C00BD21AC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		CDE8226D2030DF6E00BD21AC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,10 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD81D2C9203F637600D851B0 /* RxSwift.framework in Frameworks */,
 				CDE822702030E33700BD21AC /* Realm.framework in Frameworks */,
-				CDE8226F2030DF6F00BD21AC /* Realm.framework in Frameworks */,
 				CDE822722030E33700BD21AC /* RealmSwift.framework in Frameworks */,
-				CDE8226E2030DF6F00BD21AC /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +154,7 @@
 		CDE8226B2030DF5E00BD21AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD81D2C8203F637600D851B0 /* RxSwift.framework */,
 				CDE8226D2030DF6E00BD21AC /* Realm.framework */,
 				CDE8226C2030DF6C00BD21AC /* RealmSwift.framework */,
 			);
@@ -173,6 +173,7 @@
 				1A581254201D550300B24449 /* Resources */,
 				CDE822742030E33700BD21AC /* Embed Frameworks */,
 				CD81D2C6203F4F7F00D851B0 /* SwiftLint */,
+				CD81D2C7203F56EA00D851B0 /* Carthage Script */,
 			);
 			buildRules = (
 			);
@@ -310,6 +311,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		CD81D2C7203F56EA00D851B0 /* Carthage Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = "Carthage Script";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -483,6 +500,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = BookExcite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -503,6 +521,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = BookExcite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
