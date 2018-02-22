@@ -47,7 +47,7 @@ class ViewController: UITableViewController {
 //        let myTask = Task()
 //        myTask.text = "Hello"
 //        myTask.completed = true
-        realm = try! Realm()
+        realm = try? Realm()
         
 //        try! realm.write {
 //            realm.add(myTask)
